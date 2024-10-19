@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>MI PORTAFOLIO ESTUDIANTIL</title>
+</head>
+
+<body>
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>Mi Portafolio</h1>
+                    <nav id="nav">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">ACERCA DE MI</a></li>
+                            <li><a href="#proyecto" onclick="seleccionar(this)">PROYECTOS</a></li>
+                            <li><a href="#skills" onclick="seleccionar(this)">HABILIDADES</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <button id="dark-mode-toggle">Modo Oscuro</button>
+
+                    <div class="redes">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2>Soy Hugo Medina, Estudiante de Desarrollo Web</h2>
+                <p class="descripcion">Apasionado por el aprendizaje y desarrollo de nuevas habilidades.</p>
+                <a href="#portfolio">Ir a Portafolio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/foto.jpg" alt="Foto de [Tu Nombre]">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">Acerca de Mi</p>
+            <h2>Hola, Soy <span>Hugo Medina</span></h2>
+            <h3>Estudiante de Desarrollo Web</h3>
+            <p>Me interesa la carrera de desarrollo de software.</p>
+            <p>He trabajado en proyectos que me han permitido desarrollar mis habilidades y poner en práctica lo aprendido en clase.</p>
+            <a href="#">Descargar CV</a>
+        </div>
+    </section>
+
+    <section id="proyecto">
+        <h3 class="titulo-seccion">Mis Proyectos</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="Proyecto 1">
+                <div class="info">
+                    <h4>Proyecto de Clase 1</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti doloremque quia nostrum eaque aperiam?</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto2.jpg" alt="Proyecto 2">
+                <div class="info">
+                    <h4>Proyecto de Clase 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime beatae harum officia mollitia porro.</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto3.jpg" alt="Proyecto 3">
+                <div class="info">
+                    <h4>Proyecto de Clase 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolorem ab perferendis omnis velit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contenedor-skills" id="skills">
+        <h3>HABILIDADES</h3>
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>HTML & CSS</p>
+                <span class="porcentaje">75%</span>
+            </div>
+            <div class="barra">
+                <div class="progreso" id="html"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>JavaScript</p>
+                <span class="porcentaje">50%</span>
+            </div>
+            <div class="barra">
+                <div class="progreso" id="js"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>Bases de Datos</p>
+                <span class="porcentaje">40%</span>
+            </div>
+            <div class="barra">
+                <div class="progreso" id="bd"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>Trabajo en Equipo</p>
+                <span class="porcentaje">80%</span>
+            </div>
+            <div class="barra">
+                <div class="progreso" id="team"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contacto">
+        <h3 class="titulo-seccion">Contáctame ahora</h3>
+        <div class="contenedor-form">
+            <form action="">
+                <div class="fila mitad">
+                    <input type="text" placeholder="Nombre Completo *" class="input-mitad" required>
+                    <input type="email" placeholder="Dirección de Email *" class="input-mitad" required>
+                </div>
+                <div class="fila">
+                    <input type="text" placeholder="Tema..." class="input-full">
+                </div>
+                <div class="fila">
+                    <textarea cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                </div>
+                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados - 2024</p>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
